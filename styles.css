@@ -848,42 +848,4 @@ nav ul li {
     display: block; /* Показываем навигацию на больших экранах */
 }
 
-/* Стили для маленьких экранов (mobile) */
-@media (max-width: 768px) {
-    .header-content {
-        display: flex;
-        justify-content: space-between; /* Распределяем элементы по краям */
-        align-items: center;
-    }
 
-    .hamburger-button {
-        display: block; /* Показываем кнопку на маленьких экранах */
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        padding: 0;
-    }
-
-    .mobile-nav {
-        display: none; /* Скрываем навигацию на маленьких экранах по умолчанию */
-        position: absolute;
-        top: 100%; /* Размещаем под шапкой */
-        left: 0;
-        width: 100%;
-        background-color: #f0f0f0;
-        padding: 10px;
-        text-align: center;
-        z-index: 10; /* Чтобы навигация была поверх других элементов */
-    }
-
-    .mobile-nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .mobile-nav li {
-        margin: 10px 0;
-    }
-}
