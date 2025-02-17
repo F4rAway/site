@@ -1,0 +1,781 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #800080; /* Фиолетовый фон для всего сайта */
+    color: #fff; /* Цвет текста для контраста */
+}
+
+header {
+    background-color: #4b0082; /* Темно-фиолетовый фон для шапки */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff; /* Цвет текста для контраста */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a, .language-button {
+    text-decoration: none;
+    color: #fff; /* Цвет текста для контраста */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.language-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.language-button:hover {
+    background-color: #d23c29;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    margin: 0 10px;
+    color: #fff; /* Цвет текста для контраста */
+}
+
+.book-button, .find-button, .details-button {
+    background-color: #d23c29;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.details-button {
+    background-color: #4b0082;
+}
+
+.details-button:hover {
+    background-color: #800080;
+}
+
+.hero {
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+}
+
+.hotels {
+    padding: 20px;
+    text-align: center;
+}
+
+.hotels h2 {
+    margin-bottom: 20px;
+}
+
+.hotel-card {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+}
+
+.hotel-card h3 {
+    margin-top: 0;
+}
+
+.hotel-card p {
+    margin: 5px 0;
+}
+
+.room-details {
+    display: flex;
+    padding: 20px;
+}
+
+.room-info {
+    margin-left: 20px;
+}
+
+.room-info h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #4b0082; /* Темно-фиолетовый фон для футера */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.map-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 200px;
+    z-index: 1000;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #4b0082;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #d23c29;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.booking-form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group label {
+    flex: 1;
+    margin-bottom: 5px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-group input, .form-group select {
+    flex: 2;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 120px);
+}
+.about-hotel {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin: 20px;
+    color: #fff;
+}
+
+.about-hotel h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-hotel ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-hotel li {
+    margin-bottom: 5px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Светло-серый фон */
+    color: #333; /* Темно-серый цвет текста */
+}
+
+header {
+    background-color: #222; /* Темно-серый фон для шапки */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    /*font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff; /* Цвет текста для контраста */
+    width: 150px; /* Задайте ширину логотипа */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+.logo img {
+    width: 100%; 
+    height: auto;
+    display: block; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a, .language-button {
+    text-decoration: none;
+    color: #fff; 
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    color: #aaa; 
+}
+
+.language-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.language-button:hover {
+    background-color: #555;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right p {
+    margin: 0 10px;
+    color: #fff; 
+}
+
+.book-button, .find-button, .details-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; 
+}
+
+.book-button:hover, .find-button:hover {
+    background-color: #333;
+}
+
+.details-button {
+    background-color: #444;
+}
+
+.details-button:hover {
+    background-color: #666;
+}
+
+.hero {
+    color: #333;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+}
+
+.hotels {
+    padding: 20px;
+    text-align: center;
+}
+
+.hotels h2 {
+    margin-bottom: 20px;
+}
+
+.hotel-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-card h3 {
+    margin-top: 0;
+}
+
+.hotel-card p {
+    margin: 5px 0;
+}
+
+.room-details {
+    display: flex;
+    padding: 20px;
+}
+
+.room-info {
+    margin-left: 20px;
+}
+
+.room-info h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #222; 
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+   
+    width: 100%;
+    bottom: 0;
+}
+
+.map-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 200px;
+    z-index: 1000;
+    border: 1px solid #ccc; 
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #333;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #555;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #d23c29;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.booking-form {
+    background: #eee;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group label {
+    flex: 1;
+    margin-bottom: 5px;
+    text-align: right;
+    margin-right: 10px;
+    color: #333;
+}
+
+.form-group input, .form-group select {
+    flex: 2;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 120px);
+}
+.actions-hotel {
+    padding: 20px;
+    background: #fff; 
+    border-radius: 5px;
+    margin: 20px;
+    color: #333;
+}
+
+.actions-hotel h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.action-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.action-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.rooms-hotel {
+    padding: 20px;
+    background: #fff; 
+    border-radius: 5px;
+    margin: 20px;
+    color: #333;
+}
+
+.rooms-hotel h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.room-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+.room-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.room-card img {
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 10px;
+}
+.services-hotel {
+    padding: 20px;
+    background: #fff; 
+    border-radius: 5px;
+    margin: 20px;
+    color: #333;
+}
+
+.services-hotel h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.services-hotel ul {
+    list-style-type: disc; 
+    padding-left: 20px;
+}
+
+.services-hotel li {
+    margin-bottom: 5px;
+}
+.restaurant-hotel {
+    padding: 20px;
+    background: #fff; 
+    border-radius: 5px;
+    margin: 20px;
+    color: #333;
+}
+
+.restaurant-hotel h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.restaurant-hotel h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.restaurant-hotel h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.restaurant-hotel ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+.restaurant-hotel li {
+    margin-bottom: 5px;
+}
+.hotel-description {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 20px;
+    color: #333;
+}
+
+.hotel-description h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hotel-description img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.details-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    display: inline-block; /* Чтобы работали padding и margin */
+}
+
+.details-button:hover {
+    background-color: #666;
+}
+/* Стили для кнопок регистрации и входа */
+.header-auth {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Добавьте отступ слева при необходимости */
+}
+
+.register-button, .login-button {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #555;
+    margin-left: 5px; /* Расстояние между кнопками */
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover, .login-button:hover {
+    background-color: #333;
+}
+
+/* Стили для форм регистрации и входа */
+.register-form, .login-form {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.register-form h1, .login-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-form label, .login-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register-form input, .login-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.register-form button, .login-form button {
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.register-form button:hover, .login-form button:hover {
+    background-color: #333;
+}
+
+.register-form p, .login-form p {
+    text-align: center;
+    margin-top: 10px;
+}/* Стили для кнопки "На главную" */
+.back-to-home {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #555;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #333;
+}
+
+/* Дополнительные стили для размещения в шапке */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Можно настроить отступы */
+}
+.details-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    display: inline-block; /* Чтобы работали padding и margin */
+}
+
+.details-button:hover {
+    background-color: #666;
+}/* Стили для контейнера кнопки "На главную" */
+.back-to-home-container {
+    text-align: center; /* Центрируем кнопку */
+    margin-top: 20px; /* Добавляем отступ сверху */
+}
+
+/* Стили для кнопки "На главную" */
+.back-to-home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #555;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home-button:hover {
+    background-color: #333;
+}
+.details-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    display: inline-block; /* Чтобы работали padding и margin */
+}
+
+.details-button:hover {
+    background-color: #666;
+}
