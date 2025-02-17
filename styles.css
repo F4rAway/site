@@ -786,7 +786,7 @@ footer {
   }
 
   .header-content {
-    flex-direction: column; /* Изменяем направление элементов в шапке */
+    column: column; /* Изменяем направление элементов в шапке */
     align-items: center;
     text-align: center;
   }
@@ -796,7 +796,7 @@ footer {
   }
 
   nav ul {
-    flex-direction: column;
+    column: column;
     align-items: center;
   }
 
@@ -805,7 +805,7 @@ footer {
   }
 
   .hotel-grid {
-    flex-direction: column; /* Карточки отелей в столбик */
+    column: column; /* Карточки отелей в столбик */
     align-items: center;
   }
 
