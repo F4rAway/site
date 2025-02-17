@@ -196,7 +196,12 @@ function openBookingModal(roomType) {
     }
     modal.style.display = 'block';
 }
+const hamburgerButton = document.querySelector('.hamburger-button');
+const mobileNav = document.querySelector('.mobile-nav');
 
+hamburgerButton.addEventListener('click', () => {
+  mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
+});
 
 
 
