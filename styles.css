@@ -779,3 +779,44 @@ footer {
 .details-button:hover {
     background-color: #666;
 }
+/* Стили для экранов меньше 768 пикселей (мобильные устройства) */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  .header-content {
+    flex-direction: column; /* Изменяем направление элементов в шапке */
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-right {
+    margin-top: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .hotel-grid {
+    flex-direction: column; /* Карточки отелей в столбик */
+    align-items: center;
+  }
+
+  .hotel-card {
+    width: 90%; /* Увеличиваем ширину карточек */
+  }
+}
+
+/* Стили для экранов от 768 до 991 пикселей (планшеты) */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 16px;
+  }
+}
