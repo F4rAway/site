@@ -839,42 +839,51 @@ nav ul li {
     text-align: right;
 }
 
-/* Медиазапрос для мобильных устройств */
-@media (max-width: 767px) {
+/* Стили для больших экранов (desktop) */
+.hamburger-button {
+    display: none; /* Скрываем кнопку на больших экранах */
+}
+
+.mobile-nav {
+    display: block; /* Показываем навигацию на больших экранах */
+}
+
+/* Стили для маленьких экранов (mobile) */
+@media (max-width: 768px) {
     .header-content {
-        flex-direction: column; /* Элементы друг под другом */
-        align-items: center; /* Центрируем элементы */
+        display: flex;
+        justify-content: space-between; /* Распределяем элементы по краям */
+        align-items: center;
     }
 
-    .logo img {
-        max-width: 120px; /* Уменьшаем логотип на мобильных */
+    .hamburger-button {
+        display: block; /* Показываем кнопку на маленьких экранах */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 0;
     }
 
-    nav {
-        width: 100%; /* Навигация на всю ширину */
+    .mobile-nav {
+        display: none; /* Скрываем навигацию на маленьких экранах по умолчанию */
+        position: absolute;
+        top: 100%; /* Размещаем под шапкой */
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 10px;
+        text-align: center;
+        z-index: 10; /* Чтобы навигация была поверх других элементов */
     }
 
-    nav ul {
-        flex-direction: column; /* Пункты меню друг под другом */
-        align-items: center; /* Центрируем пункты меню */
-        padding: 0; /* Убираем отступы */
+    .mobile-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
-    nav ul li {
-        margin: 5px 0; /* Отступы между пунктами меню */
-    }
-
-    .header-right {
-        text-align: center; /* Центрируем контакты */
-        margin-top: 10px; /* Отступ от навигации */
-    }
-
-    .header-right p {
-        font-size: 14px; /* Уменьшаем размер шрифта */
-    }
-
-    /* Скрываем рейтинг отеля на очень маленьких экранах (опционально) */
-    .header-right p:last-child {
-        display: none;
+    .mobile-nav li {
+        margin: 10px 0;
     }
 }
