@@ -779,44 +779,72 @@ footer {
 .details-button:hover {
     background-color: #666;
 }
-/* Стили для экранов меньше 768 пикселей (мобильные устройства) */
-@media (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-
-  .header-content {
-    column: column; /* Изменяем направление элементов в шапке */
-    align-items: center;
-    text-align: center;
-  }
-
-  .header-right {
-    margin-top: 10px;
-  }
-
-  nav ul {
-    column: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  .hotel-grid {
-    column: column; /* Карточки отелей в столбик */
-    align-items: center;
-  }
-
-  .hotel-card {
-    width: 90%; /* Увеличиваем ширину карточек */
-  }
+/* Общие стили для шапки */
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
 }
 
-/* Стили для экранов от 768 до 991 пикселей (планшеты) */
-@media (min-width: 768px) and (max-width: 991px) {
-  body {
-    font-size: 16px;
-  }
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px; /* Ограничиваем ширину логотипа */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+.header-right {
+    text-align: right;
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 767px) {
+    .header-content {
+        flex-direction: column; /* Элементы друг под другом */
+        align-items: center; /* Центрируем элементы */
+    }
+
+    .logo img {
+        max-width: 120px; /* Уменьшаем логотип на мобильных */
+    }
+
+    nav {
+        width: 100%; /* Навигация на всю ширину */
+    }
+
+    nav ul {
+        flex-direction: column; /* Пункты меню друг под другом */
+        align-items: center; /* Центрируем пункты меню */
+        padding: 0; /* Убираем отступы */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Отступы между пунктами меню */
+    }
+
+    .header-right {
+        text-align: center; /* Центрируем контакты */
+        margin-top: 10px; /* Отступ от навигации */
+    }
+
+    .header-right p {
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+
+    /* Скрываем рейтинг отеля на очень маленьких экранах (опционально) */
+    .header-right p:last-child {
+        display: none;
+    }
 }
