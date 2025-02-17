@@ -195,7 +195,22 @@ function openBookingModal(roomType) {
     }
     modal.style.display = 'block';
 }
+// Проверяем ширину экрана при загрузке страницы и при изменении размера окна
+function checkScreenWidth() {
+  if (window.innerWidth <= 768) {
+    // Скрываем шапку
+    document.querySelector('header').style.display = 'none';
+  } else {
+    // Показываем шапку
+    document.querySelector('header').style.display = 'block';
+  }
+}
 
+// Вызываем функцию при загрузке страницы
+window.onload = checkScreenWidth;
+
+// Вызываем функцию при изменении размера окна
+window.addEventListener('resize', checkScreenWidth);
 
 
 
