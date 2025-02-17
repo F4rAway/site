@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
     const languageButton = document.getElementById('languageButton');
     const translations = {
         ru: {
@@ -196,12 +195,7 @@ function openBookingModal(roomType) {
     }
     modal.style.display = 'block';
 }
-const hamburgerButton = document.querySelector('.hamburger-button');
-const mobileNav = document.querySelector('.mobile-nav');
 
-hamburgerButton.addEventListener('click', () => {
-  mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
-});
 
 
 
