@@ -809,6 +809,36 @@ nav ul li {
     text-align: right;
 }
 
+/* Общие стили для шапки */
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px; /* Ограничиваем ширину логотипа */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+.header-right {
+    text-align: right;
+}
+
 /* Медиазапрос для мобильных устройств */
 @media (max-width: 767px) {
     .header-content {
